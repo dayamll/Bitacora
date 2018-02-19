@@ -1,0 +1,14 @@
+{
+  "name": "flash-vitacora",
+  "version": "1.0.0",
+  "description": "\"Flash-Vitacora\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dayam Llerena Castro & Margarita Sutta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
