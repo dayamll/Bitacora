@@ -18,6 +18,10 @@
     <p>"Publish anything", just in your browser</p>
   </header>
 
+  <section class="container" id="content">
+
+  </section>
+
   <div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large red">
       <i class="large material-icons">mode_edit</i>
@@ -53,17 +57,18 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="input-destination" type="text" class="validate" placeholder="">
+              <input id="modal-chat-title" type="text" class="validate" placeholder="" data-length="10">
               <label>Title</label>
             </div>
             <div class="input-field col s12">
-              <input id="input-destination" type="text" class="validate" placeholder="">
+              <input id="modal-chat-message" type="text" class="validate" placeholder="">
               <label>Message</label>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat teal darken-1 white-word">Public
-                <i class="tiny material-icons">send</i>
-              </a>
+              <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
+                type="submit" name="action">Post
+                <i class="material-icons right">send</i>
+              </button>
             </div>
           </div>
         </form>
@@ -80,16 +85,17 @@
           <div class="row">
             <div class="input-field col s12">
               <input id="input-destination" type="text" class="validate" placeholder="">
-              <label>Title de tu Evento</label>
+              <label>Title de tu evento</label>
             </div>
-            <div class="input-field col s12">
-              <input id="input-destination" type="text" class="validate">
-              <label>¿En que fecha se realizo el evento?</label>
-            </div>
+            <button class="btn waves-effect waves-light margin" type="submit" name="action">Imagen
+              <i class="material-icons right">send</i>
+            </button>
+            <hr>
             <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat teal darken-1 white-word">Public
-                <i class="tiny material-icons">send</i>
-              </a>
+              <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
+                type="submit" name="action">Post
+                <i class="material-icons right">send</i>
+              </button>
             </div>
           </div>
         </form>
@@ -99,13 +105,28 @@
   <!-- final de modal -->
 
   <!-- Modal Structure -->
-  <div id="modal3" class="modal">
+  <div id="modal3" class="modal size-box">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="input-destination" type="text" class="validate" placeholder="">
+              <label>Title de tu Evento</label>
+            </div>
+            <div class="input-field col s12 center-align">
+              <input id="input-destination" type="date" class="validate datepicker">
+              <label>¿En que fecha se realizo el evento?</label>
+            </div>
+            <div class="modal-footer">
+              <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
+                type="submit" name="action">Post
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <!-- final de modal -->
@@ -113,11 +134,26 @@
   <!-- Modal Structure -->
   <div id="modal4" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="input-destination" type="text" class="validate" placeholder="">
+              <label>Title de tu evento</label>
+            </div>
+            <button class="btn waves-effect waves-light margin" type="submit" name="action">Audio o Video
+              <i class="material-icons right">send</i>
+            </button>
+            <hr>
+            <div class="modal-footer">
+              <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
+                type="submit" name="action">Post
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <!-- final de modal -->

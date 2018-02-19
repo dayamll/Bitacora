@@ -5,3 +5,21 @@
 .btn-flat i {
   font-size: 1rem;
 }
+
+.size-box {
+  padding: 50px;
+  height: 68vh;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.picker__box {
+  width: 80%;
+  margin-left: 50px;
+  margin-top: -25px;
+} 
+
+.margin {
+  margin-top: 20px;
+  margin-bottom: -5px;
+}
