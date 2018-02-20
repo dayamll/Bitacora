@@ -28,7 +28,7 @@ btnPost[0].addEventListener('click', function() {
   container.appendChild(text);
   container.appendChild(paragraph);
   publications.appendChild(container);
-  container.className = 'container ' + 'center-align ' + 'card-panel ' + 'hoverable';
+  container.className = 'center-align ' + 'card-panel ' + 'hoverable';
   title.value = ' ';
   message.value = ' ';
 });
