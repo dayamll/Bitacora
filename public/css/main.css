@@ -1,4 +1,4 @@
-.white-word{
+.white-word {
   color: white;
 }
 
@@ -17,9 +17,28 @@
   width: 80%;
   margin-left: 50px;
   margin-top: -25px;
-} 
+}
 
 .margin {
   margin-top: 20px;
   margin-bottom: -5px;
+}
+
+.size-image {
+  width: 500px;
+}
+
+.card-panel {
+  margin: 4rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .size-image {
+    width: 280px;
+    margin: 5px;
+  }
+
+  .card-panel {
+    margin: 1rem;
+  }
 }

@@ -9,29 +9,28 @@ $('.datepicker').pickadate({
   selectYears: 15 // Creates a dropdown of 15 years to control year
 });
 
-/* Funciones para publicar texto */
+/* Funcion para publicar texto */
 
 var title = document.getElementById('modal-chat-title');
-var mesaje = document.getElementById('modal-chat-message');
+var message = document.getElementById('modal-chat-message');
 var publications = document.getElementById('content');
 var btnPost = document.getElementsByClassName('post');
 
 btnPost[0].addEventListener('click', function() {
   event.preventDefault();
   var titulo = title.value;
-  var mensaje = mesaje.value;
-  var div = document.createElement('div');
-  var h5 = document.createElement('h5');
-  h5.textContent = titulo;
-  var parrafo = document.createElement('p');
-  parrafo.textContent = mensaje;
-  div.appendChild(h5);
-  div.appendChild(parrafo);
-  publications.appendChild(div);
-  div.className = 'container ' + 'center ' + 'card-panel ' + 'hoverable';
+  var areaMensaje = message.value;
+  var container = document.createElement('div');
+  var text = document.createElement('h3');
+  text.textContent = titulo;
+  var paragraph = document.createElement('p');
+  paragraph.textContent = areaMensaje;
+  container.appendChild(text);
+  container.appendChild(paragraph);
+  publications.appendChild(container);
+  container.className = 'container ' + 'center-align ' + 'card-panel ' + 'hoverable';
   title.value = ' ';
-  mesaje.value = ' ';
-  modal[0].style.display = 'none';
+  message.value = ' ';
 });
 
 // Funcion para postear imagenes
@@ -43,7 +42,7 @@ btnPost[1].addEventListener('click', function(e) {
   event.preventDefault();
   var titleImg = contentTitleImg.value;
   var content = document.createElement('div');
-  var textImg = document.createElement('h5');
+  var textImg = document.createElement('h3');
   textImg.textContent = titleImg;
   // El objeto FileReader permite que las aplicaciones web lean ficheros
   var fileReader = new FileReader();
@@ -52,12 +51,12 @@ btnPost[1].addEventListener('click', function(e) {
 
   fileReader.onload = function() {
     // Image crea una nueva HTMLImageElementinstancia, es mas como un document.createElement('img')
-    var image = new Image();
-    image.src = fileReader.result;
-    image.classList.add('image-responsive', 'col', 's12');
-    content.className = 'container ' + 'center ' + 'card-panel ' + 'hoverable';
+    var imagen = new Image();
+    imagen.src = fileReader.result;
+    imagen.classList.add('image-responsive', 'col', 's12', 'size-image');
+    content.className = 'center-align ' + 'card-panel ' + 'hoverable';
     content.appendChild(textImg);
-    content.appendChild(image);
+    content.appendChild(imagen);
     publications.appendChild(content);
     contentTitleImg.value = ' ';
   };
