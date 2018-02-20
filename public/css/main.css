@@ -46,10 +46,12 @@ body {
   box-shadow: 10px 10px 5px rgb(158, 158, 158);
   border: 1px solid rgb(211, 209, 209);
   text-align: center;
+  background-color: white;
 }
 
 .card-panel {
   text-align: center;
+  background-color: white;
 }
 
 h3 {
