@@ -30,6 +30,12 @@
 
 .card-panel {
   margin: 4rem;
+  box-shadow: 10px 10px 5px rgb(177, 177, 177);
+  border: 1px solid rgb(211, 209, 209);
+}
+
+.card-panel:hover {
+  box-shadow: 10px 10px 5px rgb(128, 124, 124);
 }
 
 @media only screen and (max-width: 500px) {
