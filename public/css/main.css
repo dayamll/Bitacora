@@ -7,7 +7,7 @@
 }
 
 .size-box {
-  padding: 50px;
+  padding: 40px;
   height: 68vh;
   overflow: hidden;
   padding-top: 100px;
@@ -25,26 +25,54 @@
 }
 
 .size-image {
-  width: 500px;
+  width: 50%;
+  height: 50%;
+}
+
+.hoverable {
+  margin: 4rem;
+  box-shadow: 10px 10px 5px rgb(158, 158, 158);
+  border: 1px solid rgb(211, 209, 209);
+  text-align: center;
 }
 
 .card-panel {
-  margin: 4rem;
-  box-shadow: 10px 10px 5px rgb(177, 177, 177);
-  border: 1px solid rgb(211, 209, 209);
+  text-align: center;
 }
 
-.card-panel:hover {
+h3 {
+  text-align: center;
+}
+
+#map {
+  height: 50%;
+  width: 50%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hoverable:hover {
   box-shadow: 10px 10px 5px rgb(128, 124, 124);
 }
 
 @media only screen and (max-width: 500px) {
   .size-image {
-    width: 280px;
+    width: 200px;
     margin: 5px;
   }
 
   .card-panel {
     margin: 1rem;
+  }
+
+  .padding {
+    padding: 0;
+    height: 68vh;
+    overflow: hidden;
+    padding-top: 100px;
   }
 }

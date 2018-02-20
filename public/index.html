@@ -19,7 +19,6 @@
   </header>
 
   <section class="container" id="content">
-
   </section>
 
   <div class="fixed-action-btn horizontal">
@@ -84,8 +83,8 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="modal-image-title" type="text" class="validate" placeholder="">
-              <label>Title de tu evento</label>
+              <input id="modal-image-title" type="text" class="validate" placeholder="" data-length="10">
+              <label>Title of your events</label>
             </div>
             <div class="file-field input-field col s12">
               <div class="btn">
@@ -111,18 +110,18 @@
   <!-- final de modal -->
 
   <!-- Modal Structure -->
-  <div id="modal3" class="modal size-box">
+  <div id="modal3" class="modal size-box padding">
     <div class="modal-content">
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="input-destination" type="text" class="validate" placeholder="">
-              <label>Title de tu Evento</label>
+              <input type="text" data-length="10" class="validate" placeholder="">
+              <label>Title of your event</label>
             </div>
             <div class="input-field col s12 center-align">
-              <input id="input-destination" type="date" class="validate datepicker">
-              <label>¿En que fecha se realizo el evento?</label>
+              <input type="date" class="validate datepicker">
+              <label>When is the event?</label>
             </div>
             <div class="modal-footer">
               <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
@@ -136,6 +135,7 @@
     </div>
   </div>
   <!-- final de modal -->
+<!--<div id="map"></div> -->
 
   <!-- Modal Structure -->
   <div id="modal4" class="modal">
@@ -145,12 +145,21 @@
           <div class="row">
             <div class="input-field col s12">
               <input id="input-destination" type="text" class="validate" placeholder="">
-              <label>Title de tu evento</label>
+              <label>Title of your event</label>
             </div>
-            <button class="btn waves-effect waves-light margin" type="submit" name="action">Audio o Video
+            <!-- <button class="btn waves-effect waves-light margin" type="submit" name="action">Audio & Video
               <i class="material-icons right">send</i>
-            </button>
-            <hr>
+            </button> -->
+            <div class="file-field input-field col s12">
+              <div class="btn">
+                <span>Audio & Video</span>
+                <i class="material-icons right">video_library</i>
+                <input type="file" accept="audio/*, video/*" id="image-file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
             <div class="modal-footer">
               <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
                 type="submit" name="action">Post
@@ -166,6 +175,8 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjkeFSHtckWhFlc1CeNQV3Ew-PIcUPHT4&callback=initMap">
+  </script>
   <script src="js/app.js"></script>
 </body>
 
