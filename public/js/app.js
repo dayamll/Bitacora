@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+$(document).ready(function() {
+  // the 'href' attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
 
@@ -11,27 +11,54 @@ $('.datepicker').pickadate({
 
 /* Funciones para publicar texto */
 
-var areaTitulo = document.getElementById("modal-chat-title");
-var areaMensaje = document.getElementById("modal-chat-message");
-var areaPublicacion = document.getElementById("content");
-var botonPublicar = document.getElementsByClassName("post");
+var title = document.getElementById('modal-chat-title');
+var mesaje = document.getElementById('modal-chat-message');
+var publications = document.getElementById('content');
+var btnPost = document.getElementsByClassName('post');
 
-botonPublicar[0].addEventListener("click", function () {
-  var titulo = areaTitulo.value;
-  var mensaje = areaMensaje.value;
-  var div = document.createElement("div");
-  var h5 = document.createElement("h5");
+btnPost[0].addEventListener('click', function() {
+  event.preventDefault();
+  var titulo = title.value;
+  var mensaje = mesaje.value;
+  var div = document.createElement('div');
+  var h5 = document.createElement('h5');
   h5.textContent = titulo;
-  var parrafo = document.createElement("p");
+  var parrafo = document.createElement('p');
   parrafo.textContent = mensaje;
   div.appendChild(h5);
   div.appendChild(parrafo);
-  areaPublicacion.appendChild(div);
-  div.className = "container " + "center " + "card-panel " + "hoverable";
-  areaTitulo.value = " ";
-  areaMensaje.value = " ";
-  // fondoModal[0].style.display = "none";
-  modal[0].style.display = "none";
+  publications.appendChild(div);
+  div.className = 'container ' + 'center ' + 'card-panel ' + 'hoverable';
+  title.value = ' ';
+  mesaje.value = ' ';
+  modal[0].style.display = 'none';
 });
 
+// Funcion para postear imagenes
 
+var contentTitleImg = document.getElementById('modal-image-title');
+var userImage = document.getElementById('image-file');
+
+btnPost[1].addEventListener('click', function(e) {
+  event.preventDefault();
+  var titleImg = contentTitleImg.value;
+  var content = document.createElement('div');
+  var textImg = document.createElement('h5');
+  textImg.textContent = titleImg;
+  // El objeto FileReader permite que las aplicaciones web lean ficheros
+  var fileReader = new FileReader();
+  // El método readAsDataURL es usado para leer el contenido del especifico del File.
+  fileReader.readAsDataURL(userImage.files[0]);
+
+  fileReader.onload = function() {
+    // Image crea una nueva HTMLImageElementinstancia, es mas como un document.createElement('img')
+    var image = new Image();
+    image.src = fileReader.result;
+    image.classList.add('image-responsive', 'col', 's12');
+    content.className = 'container ' + 'center ' + 'card-panel ' + 'hoverable';
+    content.appendChild(textImg);
+    content.appendChild(image);
+    publications.appendChild(content);
+    contentTitleImg.value = ' ';
+  };
+});

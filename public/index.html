@@ -34,12 +34,12 @@
       </li>
       <li>
         <a class="btn-floating yellow darken-1 waves-effect waves-light btn modal-trigger" href="#modal2">
-          <i class="material-icons">date_range</i>
+          <i class="material-icons">photo_library</i>
         </a>
       </li>
       <li>
         <a class="btn-floating green waves-effect waves-light btn modal-trigger" href="#modal3">
-          <i class="material-icons">photo_library</i>
+          <i class="material-icons">date_range</i>
         </a>
       </li>
       <li>
@@ -66,7 +66,7 @@
             </div>
             <div class="modal-footer">
               <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
-                type="submit" name="action">Post
+                type="submit">Post
                 <i class="material-icons right">send</i>
               </button>
             </div>
@@ -84,13 +84,19 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="input-destination" type="text" class="validate" placeholder="">
+              <input id="modal-image-title" type="text" class="validate" placeholder="">
               <label>Title de tu evento</label>
             </div>
-            <button class="btn waves-effect waves-light margin" type="submit" name="action">Imagen
-              <i class="material-icons right">send</i>
-            </button>
-            <hr>
+            <div class="file-field input-field col s12">
+              <div class="btn">
+                <span>Image</span>
+                <i class="material-icons right">image</i>
+                <input type="file" accept="image/*" id="image-file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
             <div class="modal-footer">
               <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
                 type="submit" name="action">Post
