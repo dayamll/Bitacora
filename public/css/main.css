@@ -1,3 +1,15 @@
+body {
+  background-color: rgb(236, 234, 234);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 6px;  
+}
 .white-word {
   color: white;
 }
