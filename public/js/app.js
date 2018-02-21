@@ -16,7 +16,7 @@ var message = document.getElementById('modal-chat-message');
 var publications = document.getElementById('content');
 var btnPost = document.getElementsByClassName('post');
 
-btnPost[0].addEventListener('click', function() {
+btnPost[0].addEventListener('click', function () {
   event.preventDefault();
   var titulo = title.value;
   var areaMensaje = message.value;
@@ -38,7 +38,7 @@ btnPost[0].addEventListener('click', function() {
 var contentTitleImg = document.getElementById('modal-image-title');
 var userImage = document.getElementById('image-file');
 
-btnPost[1].addEventListener('click', function(e) {
+btnPost[1].addEventListener('click', function (e) {
   event.preventDefault();
   var titleImg = contentTitleImg.value;
   var content = document.createElement('div');
@@ -49,7 +49,7 @@ btnPost[1].addEventListener('click', function(e) {
   // El método readAsDataURL es usado para leer el contenido del especifico del File.
   fileReader.readAsDataURL(userImage.files[0]);
 
-  fileReader.onload = function() {
+  fileReader.onload = function () {
     // Image crea una nueva HTMLImageElementinstancia, es mas como un document.createElement('img')
     var imagen = new Image();
     imagen.src = fileReader.result;
@@ -64,7 +64,6 @@ btnPost[1].addEventListener('click', function(e) {
 
 
 /* Evento y geolocalización*/
-
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
@@ -76,25 +75,6 @@ function initMap() {
   var infoWindow = new google.maps.InfoWindow({
     map: map
   });
-
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {

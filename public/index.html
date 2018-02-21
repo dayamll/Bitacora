@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <title>Flash Bitacora</title>
   <link rel="icon" href="assets/images/msg.png">
   <link rel="stylesheet" href="css/main.css">
@@ -16,7 +16,9 @@
 <body>
   <header class="center-align">
     <h1 class="title">Flash Bitácora</h1>
-    <h5><strong>"Publish anything", just in your browser.</strong></h5>
+    <h5>
+      <strong>"Publish anything", just in your browser.</strong>
+    </h5>
   </header>
 
   <section class="container" id="content">
@@ -117,26 +119,22 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input type="text" data-length="12" class="validate" placeholder="">
-              <label>Title of your event</label>
+              <input type="text" class="validate" data-length="10" id="modal-event-title" />
+              <label for="first_name">Título</label>
             </div>
-            <div class="input-field col s12 center-align">
-              <input type="date" class="validate datepicker">
-              <label>When is the event?</label>
+            <div class="input-field col s12">
+              <input type="date" class="datepicker" id="modal-event-date" placeholder="Fecha del evento">
             </div>
-            <div class="modal-footer">
-              <button class="btn waves-effect waves-light margin modal-close modal-action waves-green btn-flat teal darken-1 white-word post"
-                type="submit" name="action">Post
-                <i class="material-icons right">send</i>
-              </button>
-            </div>
+            <button class="btn waves-effect waves-light right green accent-2 publicar" type="submit" name="action" data-publication="event">Publicar
+              <i class="material-icons right">send</i>
+            </button>
           </div>
         </form>
       </div>
     </div>
   </div>
   <!-- final de modal -->
-<!--<div id="map"></div> -->
+  <div id="map"></div>
 
   <!-- Modal Structure -->
   <div id="modal4" class="modal">
@@ -148,9 +146,6 @@
               <input id="input-destination" data-length="12" type="text" class="validate" placeholder="">
               <label>Title of your event</label>
             </div>
-            <!-- <button class="btn waves-effect waves-light margin" type="submit" name="action">Audio & Video
-              <i class="material-icons right">send</i>
-            </button> -->
             <div class="file-field input-field col s12">
               <div class="btn">
                 <span>Audio & Video</span>

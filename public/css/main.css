@@ -39,6 +39,7 @@ body {
 .size-image {
   width: 50%;
   height: 50%;
+  border-radius: 5px;
 }
 
 .hoverable {
@@ -47,11 +48,13 @@ body {
   border: 1px solid rgb(211, 209, 209);
   text-align: center;
   background-color: white;
+  border-radius: 5px;
 }
 
 .card-panel {
   text-align: center;
   background-color: white;
+  border-radius: 5px;
 }
 
 h3 {
